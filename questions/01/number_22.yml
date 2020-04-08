@@ -11,15 +11,19 @@ question: |
   Какой график отражает правильную эксплуатацию двигателя [[blank1]]?
   Укажите в процентах допустимые нижние границы [[blank2]]%, [[blank3]]ºC и верхние границы [[blank4]]%, [[blank5]]ºC.
 
+  Рис 1.
+  <img src="repo:images/number_22_graph_1.png">
+
+  Рис 2.
+  <img src="repo:images/number_22_graph_2.png">
+
 answers:
   blank1:
     type: ShortAnswer
     width: 10em
     required: True
     correct_answer:
-    - <plain>BAR
-    - <plain>bar
-    - <plain>Bar
+    - <plain>1
 
   blank2:
     type: ShortAnswer
