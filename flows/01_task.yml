@@ -53,20 +53,6 @@ rules:
 
 groups:
 -
-    id: intro
-    pages:
-    -
-        type: Page
-        id: welcome
-        content: |
-
-            # Добро пожаловать на Задание №1 "Числа"!
-
-            Не бойтесь, у вас все получится.
--
-    id: number
-    shuffle: False
-    pages:
     -
         {{ indented_include("questions/01/number_1.yml", 8) }}
 
