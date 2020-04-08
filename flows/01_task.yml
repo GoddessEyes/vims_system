@@ -53,6 +53,9 @@ rules:
 
 groups:
 -
+    id: number
+    shuffle: False
+    pages:
     -
         {{ indented_include("questions/01/number_1.yml", 8) }}
 
