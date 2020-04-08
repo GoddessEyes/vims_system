@@ -16,37 +16,37 @@ question: |
     <tr>
       <th>13</th>
       <th>[[blank1]]</th>
-      <th>[[blank1]]</th>
+      <th>[[blank1-1]]</th>
     </tr>
     <tr>
       <th>14</th>
       <th>[[blank2]]</th>
-      <th>[[blank2]]</th>
+      <th>[[blank2-1]]</th>
     </tr>
     <tr>
       <th>15</th>
       <th>[[blank3]]</th>
-      <th>[[blank3]]</th>
+      <th>[[blank3-1]]</th>
     </tr>
     <tr>
       <th>16</th>
       <th>[[blank4]]</th>
-      <th>[[blank4]]</th>
+      <th>[[blank4-1]]</th>
     </tr>
     <tr>
       <th>FI</th>
       <th>[[blank5]]</th>
-      <th>[[blank5]]</th>
+      <th>[[blank5-1]]</th>
     </tr>
     <tr>
       <th>F2</th>
       <th>[[blank6]]</th>
-      <th>[[blank6]]</th>
+      <th>[[blank6-1]]</th>
     </tr>
     <tr>
       <th>OK</th>
       <th>[[blank7]]</th>
-      <th>[[blank7]]</th>
+      <th>[[blank7-1]]</th>
     </tr>
    </table>
 
@@ -60,7 +60,25 @@ answers:
     - <plain>FOO
     - <plain>foo
 
+  blank1-1:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
   blank2:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank2-1:
     type: ShortAnswer
     width: 30em
     required: True
@@ -78,7 +96,25 @@ answers:
       - <plain>FOO
       - <plain>foo
 
+  blank3-1:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
   blank4:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank4-1:
     type: ShortAnswer
     width: 30em
     required: True
@@ -96,6 +132,15 @@ answers:
       - <plain>FOO
       - <plain>foo
 
+  blank5-1:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
   blank6:
     type: ShortAnswer
     width: 30em
@@ -105,7 +150,25 @@ answers:
       - <plain>FOO
       - <plain>foo
 
+  blank6-1:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
   blank7:
+    type: ShortAnswer
+    width: 30em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank7-1:
     type: ShortAnswer
     width: 30em
     required: True
