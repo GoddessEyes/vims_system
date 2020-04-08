@@ -1,14 +1,15 @@
 {% from "macros/yaml-macros.yml" import indented_include %}
 
-title: "Задание №1"
+title: "Задание №1 Числа"
 
 description: |
 
-    # Примечание: Правильных ответов на вопрос может быть больше, чем один.
+    # Необходимо выполнить тест до 29.04.2020
 
 event:
     kind: practice
     title: Практика 1
+    description: Vims System
     ordinal: 3
     time: 2019-04-23
     end_time: 2020-04-29
@@ -59,7 +60,9 @@ groups:
         id: welcome
         content: |
 
-            # Добро пожаловать на Задание №1!
+            # Добро пожаловать на Задание №1 "Числа"!
+
+            Не бойтесь, у вас все получится.
 -
     id: number
     shuffle: False
