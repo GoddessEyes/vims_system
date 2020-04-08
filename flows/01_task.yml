@@ -1,15 +1,14 @@
 {% from "macros/yaml-macros.yml" import indented_include %}
 
-title: "Задание №1 Числа"
+title: "Задание №1"
 
 description: |
 
-    # Необходимо выполнить тест до 29.04.2020
+    # Примечание: Правильных ответов на вопрос может быть больше, чем один.
 
 event:
     kind: practice
     title: Практика 1
-    description: Основы Python
     ordinal: 3
     time: 2019-04-23
     end_time: 2020-04-29
@@ -60,9 +59,7 @@ groups:
         id: welcome
         content: |
 
-            # Добро пожаловать на Задание №1 "Числа"!
-
-            Не бойтесь, у вас все получится.
+            # Добро пожаловать на Задание №1!
 -
     id: number
     shuffle: False

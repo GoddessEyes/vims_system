@@ -4,26 +4,17 @@ title: "Лекция №1"
 description: |
     # Лекция №1
 
-    1. О Python
-
-    2. Базовые определения
-
-    3. Последовательности и циклы
-
-video_src: 'https://www.youtube.com/embed/6gGR44e8e6s?list=PL4AEUdUthRKZiJ_Ocja2egY2w9pU107ch'
-
 additional_info:
     -
-        title: Python
-        link: https://www.python.org/
+        title: Сайт CATERPILLAR
+        link:  https://www.cat.com
     -
-        title: Django
-        link: https://docs.djangoproject.com/
+        title: Официальный дилер
+        link: https://amurmachinery.ru
 
 event:
     kind: lecture
     title: Лекция 1
-    description: Основы Python
     ordinal: 2
     time: 2019-04-23
     end_time: 2020-04-29
