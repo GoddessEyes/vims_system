@@ -63,6 +63,8 @@ groups:
     -
         {{ indented_include("questions/01/number_3.yml", 8) }}
     -
+        {{ indented_include("questions/01/number_15.yml", 8) }}
+    -
         {{ indented_include("questions/01/number_22.yml", 8) }}
     -
         {{ indented_include("questions/01/number_23.yml", 8) }}

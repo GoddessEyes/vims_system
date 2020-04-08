@@ -1,0 +1,81 @@
+type: InlineMultiQuestion
+id: number_22
+value: 22
+prompt: |
+    # Что изображено под цифрами 13, 14, 15 и 16, а также обозначено на рисунке под кнопками F1, F2 и OK. Для чего нужно и как используется
+
+question: |
+
+  <img src="repo:static/1/images/number_15_graph_1.png">
+
+  13 - [[blank1]]
+  14 - [[blank2]]
+  15 - [[blank3]]
+  16 - [[blank4]]
+  FI - [[blank5]]
+  F2 - [[blank6]]
+  OK - [[blank7]]
+
+answers:
+  blank1:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+    - <plain>Foo
+    - <plain>FOO
+    - <plain>foo
+
+  blank2:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank3:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank4:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank5:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank6:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
+
+  blank7:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+      - <plain>Foo
+      - <plain>FOO
+      - <plain>foo
