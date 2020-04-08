@@ -2,6 +2,7 @@ type: ChoiceQuestion
 id: number_1
 value: 1
 prompt: |
+    # Krylov-space methods
     Синяя лампа мигает при запуске 3 раза, какая причина
 
 choices:
