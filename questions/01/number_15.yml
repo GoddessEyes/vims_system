@@ -8,13 +8,37 @@ question: |
 
   <img src="repo:static/1/images/number_15_graph_1.png">
 
-  13 - [[blank1]]
-  14 - [[blank2]]
-  15 - [[blank3]]
-  16 - [[blank4]]
-  FI - [[blank5]]
-  F2 - [[blank6]]
-  OK - [[blank7]]
+
+  <table border="1">
+    <tr>
+      <th>13</th>
+      <th>[[blank1]]</th>
+    </tr>
+    <tr>
+      <th>14</th>
+      <th>[[blank2]]</th>
+    </tr>
+    <tr>
+      <th>15</th>
+      <th>[[blank3]]</th>
+    </tr>
+    <tr>
+      <th>16</th>
+      <th>[[blank4]]</th>
+    </tr>
+    <tr>
+      <th>FI</th>
+      <th>[[blank5]]</th>
+    </tr>
+    <tr>
+      <th>F2</th>
+      <th>[[blank6]]</th>
+    </tr>
+    <tr>
+      <th>OK</th>
+      <th>[[blank7]]</th>
+    </tr>
+   </table>
 
 answers:
   blank1:
