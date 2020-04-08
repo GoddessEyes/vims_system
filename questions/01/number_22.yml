@@ -2,7 +2,6 @@ type: InlineMultiQuestion
 id: number_22
 value: 22
 prompt: |
-
     # Заполните:
 
 question: |
@@ -20,7 +19,7 @@ question: |
 answers:
   blank1:
     type: ShortAnswer
-    width: 10em
+    width: 4em
     required: True
     correct_answer:
     - <plain>1
