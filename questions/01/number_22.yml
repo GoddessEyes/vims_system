@@ -1,0 +1,50 @@
+type: InlineMultiQuestion
+id: number_22
+value: 22
+prompt: |
+
+    # Заполните:
+
+question: |
+
+  Механик скачал гистограммы температуры охлаждающей жидкости двигателя, рис. 1 и 2.
+  Какой график отражает правильную эксплуатацию двигателя [[blank1]]?
+  Укажите в процентах допустимые нижние границы [[blank2]]%, [[blank3]]ºC и верхние границы [[blank4]]%, [[blank5]]ºC.
+
+answers:
+  blank1:
+    type: ShortAnswer
+    width: 10em
+    required: True
+    correct_answer:
+    - <plain>BAR
+    - <plain>bar
+    - <plain>Bar
+
+  blank2:
+    type: ShortAnswer
+    width: 4em
+    required: True
+    correct_answer:
+      - <plain>100
+
+  blank3:
+    type: ShortAnswer
+    width: 4em
+    required: True
+    correct_answer:
+      - <plain>100
+
+  blank4:
+    type: ShortAnswer
+    width: 4em
+    required: True
+    correct_answer:
+      - <plain>100
+
+  blank5:
+    type: ShortAnswer
+    width: 4em
+    required: True
+    correct_answer:
+      - <plain>100
