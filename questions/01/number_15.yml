@@ -43,7 +43,7 @@ question: |
 answers:
   blank1:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
     - <plain>Foo
@@ -52,7 +52,7 @@ answers:
 
   blank2:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
       - <plain>Foo
@@ -61,7 +61,7 @@ answers:
 
   blank3:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
       - <plain>Foo
@@ -70,7 +70,7 @@ answers:
 
   blank4:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
       - <plain>Foo
@@ -79,7 +79,7 @@ answers:
 
   blank5:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
       - <plain>Foo
@@ -88,7 +88,7 @@ answers:
 
   blank6:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
       - <plain>Foo
@@ -97,7 +97,7 @@ answers:
 
   blank7:
     type: ShortAnswer
-    width: 10em
+    width: 30em
     required: True
     correct_answer:
       - <plain>Foo
