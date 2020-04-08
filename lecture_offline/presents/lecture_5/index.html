@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="html_renderer/shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="html_renderer/highlight/github_color_scheme.css">
+</head>
+<style>
+    li {
+        font-size: 32px;
+    }
+
+    .big {
+        font-size: 24px;
+    }
+
+    .large {
+        font-size: 32px;
+    }
+
+    .onCenter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide:after {
+        display: none;
+    }
+
+</style>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Фогстрим лекцции</h1>
+    <p>Функции</p>
+</header>
+
+<h1>ООП</h1>
+<section class="slide onCenter"><h2>Галопом по ООП</h2>
+</section>
+<section class="slide"><h2>ООП</h2>
+    <p class="large onCenter" style="height: 70%">Парадигма программирования, в которой основными концепциями являются
+        понятия
+        объектов и классов.</p>
+</section>
+
+<section class="slide"><h2>Задача</h2>
+    <div class="onCenter" style="height: 70%">
+        <p class="large">Я сделал задачу, хочу скинуть ссылку Егору в телеграмме.</p>
+    </div>
+</section>
+
+<section class="slide"><h2>Решение</h2>
+    <p class="onCenter" style="height: 70%"><img src="./images/schema1.png" alt="Шаг 1"></p>
+</section>
+<section class="slide"><h2>Решение</h2>
+    <p class="onCenter" style="height: 70%"><img src="./images/schema2.png" alt="Шаг 2"></p>
+</section>
+<section class="slide"><h2>Решение</h2>
+    <p class="onCenter" style="height: 70%"><img src="./images/schema3.png" alt="Шаг 3"></p>
+</section>
+<section class="slide"><h2>Решение</h2>
+    <p class="onCenter" style="height: 70%"><img src="./images/schema4.png" alt="Шаг 4"></p>
+</section>
+<section class="slide"><h2>Решение</h2>
+    <p class="onCenter" style="height: 70%"><img src="./images/schema5.png" alt="Шаг 5"></p>
+</section>
+<section class="slide"><h2>Решение</h2>
+    <p class="onCenter" style="height: 70%"><img src="./images/schema6.png" alt="Шаг 6"></p>
+</section>
+<section class="slide"><h2>Решение</h2>
+    <pre class="big"><code class="lang-python">class Sender:
+  ...
+class User:
+  ...
+
+def send_message_to_user(message):
+    message.user.send_status_of_message(
+        message,
+        by_sender = Sender(),
+    )
+</code></pre>
+</section>
+<section class="slide onCenter"><h2>Классы и объекты</h2>
+</section>
+<section class="slide"><h2>Классы и объекты</h2>
+    <ul>
+        <li><em>класс</em> - модель сущности</li>
+        <li><em>объект</em> - конкретная сущность заданного класса</li>
+    </ul>
+</section>
+<section class="slide"><h2>Классы и объекты</h2>
+    <ul>
+        <li><em>класс</em> - модель сущности</li>
+    </ul>
+    <pre class="large"><code class="lang-python">class User:
+    email = emailField()
+    login = string(50)
+</code></pre>
+</section>
+<section class="slide"><h2>Классы и объекты</h2>
+    <ul>
+        <li><em>объект</em> - конкретная сущность заданного класса</li>
+    </ul>
+    <pre class="big"><code class="lang-python">User(email=&#39;python_master3000@mail.ru&#39;, login=&#39;pythonmaster&#39;)
+
+User(email=&#39;jsIsCool@rambler.ru&#39;, login=&#39;jsNinja&#39;)
+</code></pre>
+</section>
+<section class="slide"><h2>Другими словами</h2>
+    <ul>
+        <li><em>класс</em> - чертеж</li>
+        <li><em>объект</em> - конкретный объект по чертежу</li>
+    </ul>
+</section>
+<section class="slide"><h2>Создаем класс</h2>
+    <pre class="big"><code class="lang-python">class Counter:
+    def __init__(self, initial=0):
+        self.value = initial
+
+    def increment(self):
+        self.value += 1
+
+    def get(self):
+      return self.value
+</code></pre>
+</section>
+<section class="slide"><h2>Создаем объект класса</h2>
+    <pre class="large"><code class="lang-python">с = Counter(5)
+c.increment()
+c.get()
+</code></pre>
+</section>
+<section class="slide onCenter"><h2>Что, куда и как?</h2>
+</section>
+<section class="slide"><h2>Создаем класс</h2>
+    <pre class="big"><code class="lang-python">class Counter:
+    # Сначала срабатывает инициализация
+    def __init__(self, initial=0):
+        self.value = initial       # запись атрибута
+
+    def increment(self):
+        self.value += 1
+
+    def get(self):
+      return self.value            # чтение атрибута
+</code></pre>
+</section>
+<section class="slide"><h2><code>__init__</code> - не констуктор</h2>
+</section>
+<section class="slide"><h2><code>__new__</code> vs <code>__init__</code></h2>
+    <ul>
+        <li><code>__new__</code> создает пустой экземпляр класса</li>
+        <li><code>__init__</code> инициализирует его</li>
+    </ul>
+</section>
+<section class="slide"><h2><code>__new__</code> vs <code>__init__</code></h2>
+    <pre class="big"><code class="lang-python">class Noop:
+    def __new__(cls, *args, **kwargs):
+        print(&quot;Creating instance with {} and {}&quot;
+              .format(args, kwargs))
+        instance = super().__new__(cls) # self
+        return instance
+
+    def __init__(self, *args, **kwargs):
+        print(&quot;Initializing with {} and {}&quot;
+              .format(args, kwargs))
+
+</code></pre>
+</section>
+<section class="slide"><h2><code>__new__</code> vs <code>__init__</code></h2>
+    <pre class="big"><code class="lang-python">
+noop = Noop(42, attr=&quot;value&quot;)
+# Creating instance with (42,) and {&#39;attr&#39;: &#39;value&#39;}
+# Initializing with (42,) and {&#39;attr&#39;: &#39;value&#39;}
+</code></pre>
+</section>
+
+<section class="slide"><h2>Ключевое слово <code>self</code></h2>
+    <p class="large">В отличие от Java или C++ в Python нет магического слово <code>this</code>.</p>
+    <p class="large">Первый аргумент любого метода экземпляра - слово <code>self</code></p>
+</section>
+<section class="slide"><h2>Ключевое слово <code>self</code></h2>
+    <p class="large">Добавляем к экземпляру класса атрибут</p>
+    <pre class="large"><code class="lang-python">self.some_attribute = value
+</code></pre>
+</section>
+<section class="slide"><h2>Ключевое слово <code>self</code></h2>
+    <pre class="big"><code class="lang-python">class A:
+    def __init__(self, value):
+      self.value = value
+
+a = A(5)
+
+a.value # 5
+
+A.value # AttributeError
+</code></pre>
+</section>
+<section class="slide"><h2>Ключевое слово <code>self</code></h2>
+    <pre class="large"><code class="lang-python">A(5).value # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Ключевое слово <code>self</code></h2>
+    <pre class="large"><code class="lang-python">A(5).value # 5
+</code></pre>
+</section>
+<section class="slide"><h2>Атрибуты класса и экземпляра</h2>
+</section>
+<section class="slide"><h2>Атрибуты класса и экземпляра</h2>
+    <pre class="large"><code class="lang-python">class Counter:
+    all_counters = []
+
+    def __init__(self, initial=0):
+        Counter.all_counters.append(self)
+        #...
+</code></pre>
+</section>
+<section class="slide"><h2>Атрибуты класса и экземпляра</h2>
+    <pre class="large"><code class="lang-python">Counter.all_counters # []
+
+a = Counter()
+b = Counter(5)
+
+Counter.all_counters # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Атрибуты класса и экземпляра</h2>
+    <pre class="large"><code class="lang-python">Counter.all_counters # []
+
+a = Counter()
+b = Counter(5)
+Counter.all_counters
+# [&lt;__main__.Counter object at ...&gt;,
+        #&lt;__main__.Counter object at ...&gt;]
+</code></pre>
+</section>
+<section class="slide"><h2>Атрибуты класса и экземпляра</h2>
+    <p class="large">Можно задавать атрибуты классов прямым присваиванием</p>
+    <pre class="large"><code class="lang-python">Counter.some_attribute = &#39;Hey!&#39;
+
+Counter.some_attribute # &#39;Hey!&#39;
+</code></pre>
+</section>
+<section class="slide"><h2>Соглашение об именовании атрибутов</h2>
+    <p class="large">В Python нет модификаторов классов</p>
+</section>
+<section class="slide"><h2>Соглашение об именовании атрибутов</h2>
+    <p class="large">В Python нет модификаторов классов</p>
+    <p class="large">Но есть договоренность</p>
+</section>
+<section class="slide"><h2>Соглашение об именовании атрибутов</h2>
+    <p class="large">В Python нет модификаторов классов</p>
+    <p class="large">Но есть договоренность, чисто по-братски</p>
+</section>
+<section class="slide"><h2>Соглашение об именовании атрибутов</h2>
+    <pre class="large"><code class="lang-python">class Noop:
+    public_attribute = 42
+    _private_attribute = [1, 2 ,3]
+
+Noop.public_attribute # 42
+
+Noop._private_attribute # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Соглашение об именовании атрибутов</h2>
+    <pre class="large"><code class="lang-python">class Noop:
+    public_attribute = 42
+    _private_attribute = [1, 2, 3]
+
+Noop.public_attribute # 42
+
+Noop._private_attribute # [1, 2, 3]
+</code></pre>
+</section>
+<section class="slide"><h2>Для особо ярых защитников атрибутов</h2>
+    <pre class="large"><code class="lang-python">class Noop:
+    __very_private_attribute = (1,)
+</code></pre>
+</section>
+<section class="slide"><h2>Для особо ярых защитников атрибутов</h2>
+    <pre class="large"><code class="lang-python">class Noop:
+    __very_private_attribute = (1,)
+
+Noop.__very_private_attribute # AttributeError
+</code></pre>
+</section>
+<section class="slide"><h2>Для особо ярых защитников атрибутов</h2>
+    <pre class="large"><code class="lang-python">class Noop:
+    __very_private_attribute = (1,)
+
+Noop.__very_private_attribute # AttributeError
+
+# Но можно так
+Noop._Noop__very_private_attribute # (1,)
+</code></pre>
+</section>
+<section class="slide"><h2>Внутренние атрибуты классов и экземпляров</h2>
+    <pre class="large"><code class="lang-python">class Noob:
+    &quot;&quot;&quot;I&#39;m empty class&quot;&quot;&quot;
+</code></pre>
+</section>
+<section class="slide"><h2>Внутренние атрибуты классов и экземпляров</h2>
+    <pre class="big"><code class="lang-python">Noob.__doc__
+# &quot;I&#39;m empty class&quot;
+Noob.__name__
+# &#39;Noob&#39;
+Noob.__module__
+# &#39;__main__&#39;
+Noob.__dict__
+# Тут описаны все внутренние метода и атрибуты класса
+</code></pre>
+</section>
+<section class="slide"><h2>Внутренние атрибуты классов и экземпляров</h2>
+    <pre class="large"><code class="lang-python">noo = Noob()
+
+noo.__dict__
+# Тут описаны все внутренние метода
+# и атрибуты экземпляра
+</code></pre>
+</section>
+<section class="slide"><h2>Наследование</h2>
+    <pre class="large"><code class="lang-python">class Counter:
+    def __init__(self, initial=0):
+        self.value = initial
+
+class OtherCounter(Counter):
+    def get(self):
+        return self.value
+</code></pre>
+</section>
+<section class="slide"><h2>Наследование</h2>
+    <pre class="large"><code class="lang-python">c = OtherCounter()
+
+c.get() # 0
+
+c.value # 0
+</code></pre>
+</section>
+<section class="slide"><h2>Наследование</h2>
+    <p class="large">Поиск имени атрибута или метода происходит в <code>__dict__</code> экземпляра. Если
+        нет таких имен, то ищет в классе, а затем рекурсивно по наследникам.</p>
+</section>
+<section class="slide"><h2>Перегрузка методов</h2>
+    <pre class="big"><code class="lang-python">class Counter:
+    def __init__(self, initial=0):
+        self.__class__.all_counters.append(self)
+        self.value = initial
+
+class OtherCounter(Counter):
+    def __init__(self, initial=0):
+        self.initial = initial
+        super().__init__(initial)
+</code></pre>
+</section>
+<section class="slide"><h2>Перегрузка методов</h2>
+    <pre class="large"><code class="lang-python">super().__init__(initial)</code></pre>
+</section>
+<section class="slide"><h2>Перегрузка методов</h2>
+    <pre class="big"><code class="lang-python">c = OtherCounter()
+# сначала __init__ у себя, затем __init__ у родителя
+</code></pre>
+</section>
+<section class="slide"><h2>Множественное наследование</h2>
+    <pre class="big"><code class="lang-python">class A:
+    def f(self):
+        print(&#39;A.f&#39;)
+
+class B:
+    def f(self):
+        print(&#39;B.f&#39;)
+
+class C(A,B):
+    pass
+</code></pre>
+</section>
+<section class="slide"><h2>Множественное наследование</h2>
+    <pre class="large"><code class="lang-python">C().f() # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Алгоритм С3</h2>
+    <p class="large">В случае множественного наследования Python использует алгоритм линеаризации C3
+        для определения метода, который нужно вызывать</p>
+</section>
+<section class="slide"><h2>Алгоритм С3</h2>
+    <p class="large">Используем функцию классов <code>mro()</code> - Method Resolution Order</p>
+    <pre class="large"><code class="lang-python">C.mro()
+# [&lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;,
+# &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;object&#39;&gt;]
+</code></pre>
+</section>
+<section class="slide"><h2>Множественное наследование</h2>
+    <pre class="large"><code class="lang-python">C().f() # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Множественное наследование</h2>
+    <pre class="large"><code class="lang-python">C().f() # &#39;A.f&#39;
+</code></pre>
+</section>
+<section class="slide onCenter"><h2>Магические методы</h2>
+</section>
+<section class="slide"><h2>Магические методы</h2>
+    <p class="large" style="height: 70%;">"Магическими" методами называются внутренние методы классов, например, <code>__init__</code>.
+    </p>
+</section>
+<section class="slide"><h2>Магические методы</h2>
+    <p class="big">С помощью магических методов можно:</p>
+    <ul>
+        <li>управлять к доступам атрибутов классов</li>
+    </ul>
+</section>
+<section class="slide"><h2>Магические методы</h2>
+    <p class="big">С помощью магических методов можно:</p>
+    <ul>
+        <li>управлять к доступам атрибутов классов</li>
+        <li>перегружать операторы, например, сравнения или арифметические операторы</li>
+    </ul>
+</section>
+<section class="slide"><h2>Магические методы</h2>
+    <p class="big">С помощью магических методов можно:</p>
+    <ul>
+        <li>управлять к доступам атрибутов классов</li>
+        <li>перегружать операторы, например, сравнения или арифметические операторы</li>
+        <li>определить строковое представление экземпляра или метод его хэширования</li>
+    </ul>
+</section>
+<section class="slide"><h2>Методы <code>__str__</code> и <code>__repr__</code></h2>
+    <pre class="big"><code class="lang-python">class Counter:
+    def __init__(self, initial=0):
+        self.value = initial
+
+    def __repr__(self):
+        return &#39;Счетчик({})&#39;.format(self.value)
+
+    def __str__(self):
+        return &#39;Привет! Я Счетчик&#39;
+</code></pre>
+</section>
+<section class="slide"><h2>Методы <code>__str__</code> и <code>__repr__</code></h2>
+    <pre class="large"><code class="lang-python">c = Counter(42)
+
+c # &#39;Счетчик(42)&#39;
+
+print(c) # &#39;Привет! Я Счетчик&#39;
+</code></pre>
+</section>
+<section class="slide"><h2>Метод <code>__bool__</code></h2>
+    <pre class="big"><code class="lang-python">class Counter:
+    def __init__(self, initial=0):
+        self.value = initial
+
+    def __bool__(self):
+        return bool(self.value)
+
+c = Counter()
+
+if not c:
+    print(&#39;No counts yet&#39;) # 'No counts yet'
+</code></pre>
+</section>
+<section class="slide"><h2>Методы сравнения</h2>
+    <pre class="large"><code class="lang-python">instance.__eq__(other) # instance == other
+instance.__ne__(other) # instance != other
+instance.__lt__(other) # instance &lt; other
+instance.__le__(other) # instance &lt;= other
+instance.__gt__(other) # instance &gt; other
+instance.__ge__(other) # instance &gt;= other
+</code></pre>
+</section>
+<section class="slide"><h2>Метод <code>__call__</code></h2>
+    <pre class="big"><code class="lang-python">class LikeFunction:
+    def __init__(self, value):
+        self.value = value
+
+    def __call__(self):
+        return self.value
+
+func = LikeFunction(5)
+
+func() # 5
+</code></pre>
+</section>
+<section class="slide"><h2>Все о магических методах</h2>
+    <p class="onCenter" style="font-size: 7rem; text-align: center; height: 70%"><a
+            href="https://docs.python.org/3/reference/datamodel.html#special-method-names">Магия тут</a></p>
+</section>
+
+<section class="slide"><h2>Flashback</h2>
+    <pre class="big"><code class="lang-python">for element in [1, 2, 3]:
+    print(element)
+
+for letter in &#39;string&#39;:
+    print(letter)
+
+for line in open(&#39;file.txt&#39;):
+    print(line)
+</code></pre>
+</section>
+<section class="slide"><h2>Совпадение?</h2>
+    <p><img src="./images/what.png" alt="Совпадение"></p>
+</section>
+<section class="slide"><h2>В чем соль?</h2>
+</section>
+<section class="slide"><h2>В чем соль?</h2>
+    <h3 class="large">ИТЕРАТОРЫ</h3>
+</section>
+<section class="slide"><h2>Iterator и Itarable</h2>
+    <ul>
+        <li>itarables - объект, который умеет возвращает элемент себя, по одному за раз</li>
+    </ul>
+</section>
+<section class="slide"><h2>Iterator и Itarable</h2>
+    <ul>
+        <li>itarables - объект, который умеет возвращает элемент себя, по одному за раз</li>
+        <li>iterator - объект, который перебирает и возращает элементы ЧЕГО-ТО</li>
+    </ul>
+</section>
+<section class="slide"><h2>itareble</h2>
+    <ul>
+        <li>реализует метод <code>__iter__</code></li>
+    </ul>
+</section>
+<section class="slide"><h2>itareble</h2>
+    <ul>
+        <li>реализует метод <code>__iter__</code></li>
+        <li><code>__iter__</code> возвращает итератор на объект</li>
+    </ul>
+</section>
+<section class="slide"><h2>iterator</h2>
+    <p class="large">Реализует два метода:</p>
+</section>
+<section class="slide"><h2>iterator</h2>
+    <p class="large">Реализует два метода:</p>
+    <ul>
+        <li><code>__next__</code> - возвращает следующий элемент, выбрасывает StopIteration</li>
+    </ul>
+</section>
+<section class="slide"><h2>iterator</h2>
+    <p class="large">Реализует два метода:</p>
+    <ul>
+        <li><code>__next__</code> - возвращает следующий элемент, выбрасывает StopIteration</li>
+        <li><code>__iter__</code></li>
+    </ul>
+</section>
+<section class="slide"><h2>Вывод</h2>
+    <ul>
+        <li>итератор итерирует</li>
+    </ul>
+</section>
+<section class="slide"><h2>Вывод</h2>
+    <ul>
+        <li>итератор итерирует</li>
+        <li>итерируемый итерируется</li>
+    </ul>
+</section>
+<section class="slide"><h2>Реализуем свой итератор</h2>
+    <pre><code class="lang-python">class seq_iter:
+    def __init__(self, instance):
+        self.instance = instance
+        self.idx = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        try:
+            res = self.instance[self.idx]
+        except IndexError:
+            raise StopIteration
+        self.idx += 1
+        return res
+</code></pre>
+</section>
+<section class="slide"><h2>Попробуем</h2>
+    <pre class="large"><code class="lang-python">sequence = seq_iter([1, 2, 3])
+
+next(sequence) # ???
+next(sequence) # ???
+next(sequence) # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Попробуем</h2>
+    <pre class="large"><code class="lang-python">sequence = seq_iter([1, 2, 3])
+
+next(sequence) # 1
+next(sequence) # 2
+next(sequence) # 3
+
+next(sequence) # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Попробуем</h2>
+    <pre class="large"><code class="lang-python">sequence = seq_iter([1, 2, 3])
+
+next(sequence) # 1
+next(sequence) # 2
+next(sequence) # 3
+
+next(sequence) # StopIteration
+</code></pre>
+</section>
+<section class="slide"><h2><code>next</code></h2>
+    <ul>
+        <li>если метод поднял исключение StopIteration, то все последующие вызовы
+            метода <strong>next</strong> тоже должны поднимать исключение.
+        </li>
+    </ul>
+</section>
+<section class="slide"><h2><code>next</code></h2>
+    <ul>
+        <li>можно указать какое значение возвращать в случае StopIteration</li>
+    </ul>
+    <pre class="large"><code class="lang-python">next(iter([]), 42)
+</code></pre>
+</section>
+<section class="slide"><h2><code>iter</code></h2>
+    <p class="large">Две формы вызова:</p>
+    <ul>
+        <li>принимает итератор и вызывает у него метод <code>__iter__</code></li>
+    </ul>
+</section>
+<section class="slide"><h2><code>iter</code></h2>
+    <p class="large">Две формы вызова:</p>
+    <ul>
+        <li>принимает итератор и вызывает у него метод <code>__iter__</code></li>
+        <li>принимает функцию и термальное значение и вызывает функцию,
+            пока она не вернет нужное значение
+        </li>
+    </ul>
+</section>
+<section class="slide"><h2><code>iter</code></h2>
+    <p class="large">Две формы вызова:</p>
+    <ul>
+        <li>принимает функцию и термальное значение и вызывает функцию,
+            пока она не вернет нужное значение
+        </li>
+    </ul>
+    <pre class="large"><code class="lang-python">for i in iter(sum, 5)
+    # что-то там делаем
+</code></pre>
+</section>
+<section class="slide"><h2>Кстати о <code>for</code></h2>
+    <p class="large centering">Можно описать концептуально через итераторы</p>
+</section>
+<section class="slide"><h2>Кстати о <code>for</code></h2>
+    <pre class="large centering"><code class="lang-python">for x in xs:
+    do_something(x)
+</code></pre>
+</section>
+<section class="slide"><h2>Кстати о <code>for</code></h2>
+    <pre class="large"><code class="lang-python">it = iter(xs)
+while True:
+  try:
+      i = next(it)
+  except StopIteration:
+      break
+  do_something(i)
+</code></pre>
+</section>
+<section class="slide"><h2>Оператор <code>in</code></h2>
+    <p class="large">Также "под коробкой" реализует с помощью итератора</p>
+    <pre class="large"><code class="lang-python">5 in [1,2,5] # True
+</code></pre>
+</section>
+<section class="slide"><h2>Оператор <code>in</code></h2>
+    <p class="large">Использует "магический метод" <code>__contains__</code></p>
+</section>
+<section class="slide"><h2>Оператор <code>in</code></h2>
+    <pre class="large"><code class="lang-python">class object:
+    # ...
+    def __contains__(self, target):
+        for item in self:
+            if item == target:
+                return True
+        return False
+</code></pre>
+</section>
+<section class="slide"><h2>Оператор <code>in</code></h2>
+    <pre class="large"><code class="lang-python">5 in [1,2,3] # [1,2,3].__contains__(5) False
+</code></pre>
+</section>
+<section class="slide"><h2>Подытожим</h2>
+    <ul>
+        <li>Итератор - экземпляр класса, который реализует два метода <code>__iter__</code> и <code>__next__</code></li>
+    </ul>
+</section>
+<section class="slide"><h2>Подытожим</h2>
+    <ul>
+        <li>Итератор - экземпляр класса, который реализует два метода <code>__iter__</code> и <code>__next__</code></li>
+        <li>протокол итераторов используется в операторах <code>for</code> и <code>in</code></li>
+    </ul>
+</section>
+<section class="slide"><h2>Подытожим</h2>
+    <ul>
+        <li>Итератор - экземпляр класса, который реализует два метода <code>__iter__</code> и <code>__next__</code></li>
+        <li>протокол итераторов используется в операторах <code>for</code> и <code>in</code></li>
+        <li>протокол итераторов реализован всех встроенными коллекциями</li>
+    </ul>
+</section>
+<section class="slide"><h2>Генераторы</h2>
+</section>
+<section class="slide"><h2>Генераторы</h2>
+    <ul>
+        <li>генератор - это итератор!</li>
+    </ul>
+</section>
+<section class="slide"><h2>Генераторы</h2>
+    <ul>
+        <li>генератор - это итератор!</li>
+        <li>под капотом автоматически создается <code>__iter__</code> и <code>__next__</code></li>
+    </ul>
+</section>
+<section class="slide"><h2>Рецепт приготовления</h2>
+    <ul>
+        <li>Пишем функцию</li>
+        <li>Меняем <code>return</code> на <code>yield</code></li>
+        <li>Все</li>
+    </ul>
+</section>
+<section class="slide"><h2>Генератор</h2>
+    <pre class="large"><code class="lang-python">def my_first_generator(x):
+    yield x
+    x += 1
+    yield x
+</code></pre>
+</section>
+<section class="slide"><h2>Давайте потрогаем</h2>
+    <pre class="large"><code class="lang-python">gen = my_first_generator(10)
+
+next(gen) # 10
+next(gen) # 11
+
+next(gen) # ???
+</code></pre>
+</section>
+<section class="slide"><h2>Давайте потрогаем</h2>
+    <pre class="large"><code class="lang-python">gen = my_first_generator(10)
+
+next(gen) # 10
+next(gen) # 11
+
+next(gen) # Ну все, хватит!
+</code></pre>
+</section>
+<section class="slide"><h2>Давайте потрогаем</h2>
+    <pre class="large"><code class="lang-python">gen = my_first_generator(10)
+
+next(gen) # 10
+next(gen) # 11
+
+next(gen) # StopIteration
+</code></pre>
+</section>
+<section class="slide"><h2>Важно</h2>
+    <p class="large">Если генератор дошел "до конца", то дальше уже не пойти</p>
+</section>
+<section class="slide"><h2>Важно</h2>
+    <p class="large">Если генератор дошел "до конца", то дальше уже не пойти</p>
+    <p class="large">нужно инициализировать новый экземпляр</p>
+</section>
+<section class="slide"><h2>Важно</h2>
+    <p class="large" style="text-align: center">Генераторы -- ленивы</p>
+    <p style="text-align: center"><img src="./images/lazy.png" alt="Лень"></p>
+</section>
+<section class="slide"><h2>Важно</h2>
+    <p style="text-align: center" class="large">Генераторы -- "ленивые" функции</p>
+</section>
+<section class="slide"><h2>Можно ли юзать <code>return</code></h2>
+    <p class="large">Ответ:</p>
+</section>
+<section class="slide"><h2>Можно ли юзать <code>return</code></h2>
+    <p class="large">Ответ: можно</p>
+</section>
+<section class="slide"><h2>Можно ли юзать <code>return</code></h2>
+    <p class="large">Ответ: можно</p>
+    <p class="large">А зачем?</p>
+</section>
+<section class="slide"><h2>Потрогаем</h2>
+    <pre class="large"><code class="lang-python">def gen():
+    for i in range(5):
+        yield i
+    return 42
+
+a = gen()
+</code></pre>
+</section>
+<section class="slide"><h2>Потрогаем</h2>
+    <pre class="large"><code class="lang-python">for _ in range(5):
+    next(a)
+
+# Когда цикл дойдет до 5, что будет?
+</code></pre>
+</section>
+<section class="slide"><h2>Потрогаем</h2>
+    <pre class="large"><code class="lang-python">for _ in range(5):
+    next(a)
+
+# StopIteration
+</code></pre>
+</section>
+<section class="slide"><h2>Потрогаем</h2>
+    <pre class="large"><code class="lang-python">for _ in range(5):
+    next(a)
+
+# StopIteration: 42
+</code></pre>
+</section>
+<section class="slide"><h2>Функция <code>map</code> в 3 строчки</h2>
+    <pre class="large centering"><code class="lang-python"># Тут сами =)
+</code></pre>
+</section>
+<section class="slide"><h2>Счетчик</h2>
+    <pre class="large"><code class="lang-python">def count(start=0):
+    while True:
+        yield start
+        start += 1
+</code></pre>
+</section>
+<section class="slide"><h2>Генераторные выражения</h2>
+    <pre class="large centering"><code class="lang-python">gen_exp = (x for x in range(5))
+</code></pre>
+</section>
+<section class="slide"><h2>Генераторные выражения</h2>
+    <p class="large">Аналогично</p>
+    <pre class="large"><code class="lang-python">def gen_exp():
+    for x in range(5):
+        yield x
+</code></pre>
+</section>
+<section class="slide"><h2>Генераторные выражения</h2>
+    <p class="large">Но не аналогично</p>
+    <pre class="large"><code class="lang-python">lst_compr = [x for x in range(5)]
+</code></pre>
+</section>
+<section class="slide"><h2>Заитожим</h2>
+    <ul>
+        <li>генераторы - итераторы</li>
+    </ul>
+</section>
+<section class="slide"><h2>Заитожим</h2>
+    <ul>
+        <li>генераторы - итераторы</li>
+        <li>генераторы - "ленивы"</li>
+    </ul>
+</section>
+<section class="slide"><h2>Заитожим</h2>
+    <ul>
+        <li>генераторы - итераторы</li>
+        <li>генераторы - "ленивы"</li>
+        <li>генераторы - это оптимально</li>
+    </ul>
+</section>
+<section class="slide onCenter">
+    <img src="./images/the_end.jpg" style="width: 100%; position: absolute; top: 0"/>
+</section>
+
+<script src="html_renderer/shower/shower.min.js"></script>
+<script src="html_renderer/highlight/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>

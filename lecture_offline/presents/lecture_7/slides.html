@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="html_renderer/shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="html_renderer/highlight/github_color_scheme.css">
+    <style>
+      li, p, pre {
+       font-size: 24px;
+      }
+
+    </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Фогстрим лекцции</h1>
+    <p>Функции</p>
+</header>
+
+<h1>Основы баз данных</h1>
+<section class="slide"><h2>Основы баз данных</h2>
+</section><section class="slide"><h2>История развития баз данных</h2>
+<p style="text-align: center"><img style="width: 80%" src="./images/history.jpg" alt="История"></p>
+</section><section class="slide"><h2>Классификация БД по организации модели</h2>
+<ul>
+<li>реляционные</li>
+<li>NoSQL</li>
+<li>Графовые</li>
+</ul>
+</section><section class="slide"><h2>NoSQL</h2>
+<p>Под лэйблом <a href="http://nosql-database.org/">NoSQL</a> сейчас скрывается множество разнородных систем</p>
+</section><section class="slide"><h2>NoSQL</h2>
+<ul>
+<li>Не используется SQL</li>
+<li>Неструктурированные (schemaless)</li>
+<li>Представление данных в виде агрегатов (aggregates)</li>
+<li>NoSQL базы в основном оупенсорсные</li>
+</ul>
+</section><section class="slide"><h2>NoSQL</h2>
+<p><img src="./images/nosql-databases.gif" alt="NoSQL"></p>
+</section><section class="slide"><h2>Графовые базы данных</h2>
+<ul>
+<li>Отсутствие единой схемы всех элементов</li>
+<li>Можно хранить и реляционные, и документарные данные</li>
+<li>Модель может меняться без изменения архитектуры</li>
+</ul>
+</section><section class="slide"><h2>Графовые базы данных</h2>
+<p><img src="./images/graphDB.png" alt="graph">.</p>
+</section><section class="slide"><h2>Особенности РБД</h2>
+<ul>
+<li>Отображает информацию в наиболее простой для пользователя форме</li>
+<li>Основана на развитом математическом аппарате</li>
+<li>Манипулирование данными на уровне выходной БД и возможность изменения.</li>
+</ul>
+</section><section class="slide"><h2>Реляционные</h2>
+<p  style="text-align: center"><img src="./images/sql.png" alt="SQL"></p>
+</section><section class="slide"><h2>Отличие реляционных БД от всех</h2>
+<ul>
+<li>Требуют наличия однозначно определённой структуры хранения данных</li>
+<li>Вне зависимости от лицензии, РСУБД реализуют SQL-стандарты</li>
+<li>Масштабируемость</li>
+<li>Надежны</li>
+<li>Хорошая поддержка</li>
+<li>Предполагают работу с сложными ситуациями</li>
+</ul>
+</section><section class="slide"><h2>Вопросы</h2>
+</section><section class="slide"><h2>Примитивы баз данных</h2>
+<p><img src="./images/structure.jpg" alt="структура"></p>
+</section><section class="slide"><h2>Знакомство с SQL</h2>
+</section><section class="slide"><h2>История развития</h2>
+<table>
+<thead><tr>
+<th>Год</th>
+<th>Название</th>
+<th>Изменения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1986</td>
+<td>SQL-86</td>
+<td>Первый вариант стандарта</td>
+</tr>
+<tr>
+<td>1989</td>
+<td>SQL-89</td>
+<td>Немного доработанный вариант предыдущего стандарта.</td>
+</tr>
+<tr>
+<td>1992</td>
+<td>SQL-92</td>
+<td>Значительные изменения (ISO 9075)</td>
+</tr>
+<tr>
+<td>1999</td>
+<td>SQL:1999</td>
+<td>Добавлена поддержка регулярных выражений, рекурсивных запросов, поддержка триггеров, базовые процедурные расширения, нескалярные типы данных и некоторые объектно-ориентированные возможности.</td>
+</tr>
+<tr>
+<td>2003</td>
+<td>SQL:2003</td>
+<td>Введены расширения для работы с XML-данными, оконные функции (применяемые для работы с OLAP-базами данных), генераторы последовательностей и основанные на них типы данных.</td>
+</tr>
+<tr>
+<td>2006</td>
+<td>SQL:2006</td>
+<td>Функциональность работы с XML-данными значительно расширена. Появилась возможность совместно использовать в запросах SQL и XQuery.</td>
+</tr>
+<tr>
+<td>2008</td>
+<td>SQL:2008</td>
+<td>Улучшены возможности оконных функций, устранены некоторые неоднозначности стандарта SQL:2003[5]</td>
+</tr>
+</tbody>
+</table>
+</section><section class="slide"><h2>Операторы SQL</h2>
+<ul>
+<li>операторы определения данных (Data Definition Language, DDL)</li>
+<li>операторы манипуляции данными (Data Manipulation Language, DML)</li>
+<li>операторы определения доступа к данным (Data Control Language, DCL)</li>
+<li>операторы управления транзакциями (Transaction Control Language, TCL)</li>
+</ul>
+</section><section class="slide"><h2>DDL</h2>
+<ul>
+<li>CREATE</li>
+<li>ALTER</li>
+<li>DROP</li>
+</ul>
+</section><section class="slide"><h2>DML</h2>
+<ul>
+<li>SELECT</li>
+<li>INSERT</li>
+<li>UPDATE</li>
+<li>DELETE</li>
+</ul>
+</section><section class="slide"><h2>DCL</h2>
+<ul>
+<li>GRANT</li>
+<li>REVOKE</li>
+<li>DENY</li>
+</ul>
+</section><section class="slide"><h2>TCL</h2>
+<ul>
+<li>COMMIT</li>
+<li>ROLLBACK</li>
+<li>SAVEPOINT</li>
+</ul>
+</section><section class="slide"><h2>Типы данных SQL</h2>
+ <p>— строковые (CHAR, VARCHAR, BLOB)</p>
+ <p>— с плавающей точкой (FLOAT, DOUBLE, DECIMAL)</p>
+<p>— целые числа, дата и время (INT, DATE, DATETIME)</p>
+</section><section class="slide"><h2>Создание таблиц</h2>
+<pre><code>CREATE TABLE table_name (
+ column_name TYPE column_constraint,
+ table_constraint table_constraint
+) INHERITS existing_table_name;
+</code></pre>
+</section><section class="slide"><h2>Пример</h2>
+<pre><code>CREATE TABLE account(
+ user_id serial PRIMARY KEY,
+ username VARCHAR (50) UNIQUE NOT NULL,
+ password VARCHAR (50) NOT NULL,
+ email VARCHAR (355) UNIQUE NOT NULL,
+ created_on TIMESTAMP NOT NULL,
+ last_login TIMESTAMP
+);
+</code></pre>
+</section><section class="slide"><h2>Пример</h2>
+<p  style="text-align: center"><img src="./images/CREATE.jpg" alt="create"></p>
+</section><section class="slide"><h2>Заполение данными</h2>
+<pre><code>INSERT INTO table(column1, column2, …)
+VALUES
+ (value1, value2, …);
+</code></pre>
+</section><section class="slide"><h2>Пример</h2>
+<pre><code>CREATE TABLE link (
+ ID serial PRIMARY KEY,
+ url VARCHAR (255) NOT NULL,
+ name VARCHAR (255) NOT NULL,
+ description VARCHAR (255),
+ rel VARCHAR (50)
+);
+</code></pre>
+</section><section class="slide"><h2>Вставка одной строки</h2>
+<pre><code>INSERT INTO link (url, name)
+VALUES
+ ('http://www.postgresqltutorial.com','PostgreSQL Tutorial');
+</code></pre>
+</section><section class="slide"><h2>Вставка нескольких строк</h2>
+<pre><code>INSERT INTO link (url, name)
+VALUES
+ ('http://www.google.com','Google'),
+ ('http://www.yahoo.com','Yahoo'),
+ ('http://www.bing.com','Bing');
+</code></pre>
+</section><section class="slide"><h2>Получение данных</h2>
+<pre><code>SELECT
+ column_1,
+ column_2,
+ ...
+FROM
+ table_name;
+</code></pre>
+</section><section class="slide"><h2>Пример</h2>
+<p  style="text-align: center"><img src="./images/customer-table.png" alt="customer"></p>
+</section><section class="slide"><h2>Пример</h2>
+<pre><code>SELECT
+ *
+FROM
+ customer;
+</code></pre>
+</section><section class="slide"><h2>Пример</h2>
+<pre><code>SELECT
+ first_name,
+ last_name,
+ email
+FROM
+ customer;
+</code></pre>
+</section><section class="slide"><h2>Условия в запросах</h2>
+<pre><code>SELECT column_1, column_2 … column_n
+FROM table_name
+WHERE conditions;
+</code></pre>
+</section><section class="slide"><h2>Условия в запросах</h2>
+<p><img src="./images/table-if.png" alt="ex"></p>
+</section><section class="slide"><h2>Пример 1</h2>
+<pre><code>SELECT last_name, first_name
+FROM customer
+WHERE first_name = 'Jamie';
+</code></pre>
+</section><section class="slide"><h2>Пример 2</h2>
+<pre><code>SELECT last_name, first_name
+FROM customer
+WHERE first_name = 'Jamie' AND
+ last_name = 'Rice';
+</code></pre>
+<p></p>
+</section><section class="slide"><h2>Пример 3</h2>
+<pre><code>SELECT customer_id,
+ amount,
+ payment_date
+FROM payment
+WHERE amount &lt;= 1 OR amount &gt;= 8;
+</code></pre>
+</section><section class="slide"><h2>Выполнение подзапросов</h2>
+<pre><code>value IN (value1,value2,...)
+</code></pre>
+</section><section class="slide"><h2>Выполнение подзапросов</h2>
+<pre><code>value IN (SELECT value FROM tbl_name);
+</code></pre>
+</section><section class="slide"><h2>Выполнение подзапросов</h2>
+<pre style="font-size: 18px"><code>SELECT
+ first_name,
+ last_name
+FROM
+ customer
+WHERE
+ customer_id IN (
+ SELECT
+ customer_id
+ FROM
+ rental
+ WHERE
+ CAST (return_date AS DATE) = '2005-05-27'
+ );
+</code></pre>
+</section><section class="slide"><h2>Обновление данных</h2>
+<pre><code>UPDATE table
+SET column1 = value1,
+    column2 = value2 ,...
+WHERE
+ condition;
+</code></pre>
+</section><section class="slide"><h2>Пример</h2>
+<pre><code>UPDATE link
+SET last_update = DEFAULT
+WHERE
+ last_update IS NULL;
+</code></pre>
+</section><section class="slide"><h2>Пример (обновление всех строк)</h2>
+<pre><code>UPDATE link
+SET rel = 'nofollow';
+</code></pre>
+</section><section class="slide"><h2>Пример (обновление с возвращением)</h2>
+<pre><code>UPDATE link
+SET description = 'Learn PostgreSQL fast and easy',
+ rel = 'follow'
+WHERE
+ ID = 1
+RETURNING id,
+ description,
+ rel;
+</code></pre>
+</section><section class="slide"><h2>Удаление данных</h2>
+<pre><code>DELETE FROM table
+WHERE condition
+</code></pre>
+</section><section class="slide"><h2>Удаление по условию</h2>
+<pre><code>DELETE
+FROM
+ link USING link_tmp
+WHERE
+ link.id = link_tmp.id;
+</code></pre>
+</section><section class="slide"><h2>Удаление всех строк</h2>
+<pre><code>DELETE
+FROM
+ link;
+</code></pre>
+<p></p>
+</section><section class="slide"><h2>Можно так</h2>
+<pre><code>DELETE
+FROM
+ link RETURNING *;
+</code></pre>
+</section><section class="slide"><h2>Вопросы</h2>
+</section><section class="slide"></section>
+
+<div class="progress"></div>
+
+<script src="html_renderer/shower/shower.min.js"></script>
+<script src="html_renderer/highlight/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="html_renderer/shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="html_renderer/highlight/github_color_scheme.css">
+    <style>
+        ul > li {
+            font-size: 24px;
+        }
+        pre {
+            font-size: 20px;
+        }
+        p {
+            font-size: 32px;
+        }
+        p img {
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Фогстрим лекцции</h1>
+    <p>Функции</p>
+</header>
+
+<h1>Основы верстки: HTML/CSS, JS</h1>
+<section class="slide"><h2>ХТМЛ/ЦСС, ДжиЭс</h2>
+</section>
+<section class="slide"><h2>Что такое веб страница?</h2>
+</section>
+<section class="slide"><h2>Что такое веб страница?</h2>
+    <p>Правильно!</p>
+</section>
+<section class="slide"><h2>Что такое веб страница?</h2>
+    <p>Правильно! Это документ с разметкой и стилями...</p>
+</section>
+<section class="slide"><h2>Что такое веб страница?</h2>
+    <p>Правильно! Это документ с разметкой и стилями... и скриптами</p>
+</section>
+<section class="slide"><h2>Что такое веб страница?</h2>
+    <p>Правильно! Это HTML-документ и CSS... и JS</p>
+</section>
+<section class="slide"><h2>Роли</h2>
+    <ul>
+        <li>HTML -- каркас документа</li>
+        <li>CSS -- оформление</li>
+        <li>JS -- поведение (анимашки всякие)</li>
+    </ul>
+</section>
+<section class="slide"><h2>HTML</h2>
+    <p>Язык гипертекста</p>
+</section>
+<section class="slide"><h2>HTML</h2>
+    <p>Язык гипертекста -- ???</p>
+</section>
+<section class="slide"><h2>HTML</h2>
+    <p>Язык гипертекста -- текст с ссылочками</p>
+</section>
+<section class="slide"><h2>HTML</h2>
+    <pre  style="font-size: 15px"><code class="lang-html">&lt;!DOCTYPE html&gt;
+
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Заголовок&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Заголовок&lt;/h1&gt;
+  &lt;!-- Комментарий --&gt;
+  &lt;p&gt;Первый абзац.&lt;/p&gt;
+  &lt;p&gt;Второй абзац.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+</section>
+<section class="slide"><h2>DOM</h2>
+    <ul>
+        <li>Document Object Model</li>
+    </ul>
+</section>
+<section class="slide"><h2>DOM</h2>
+    <p><img src="./images/dom.gif" alt="dom"></p>
+</section>
+<section class="slide"><h2>Тэги</h2>
+    <ul>
+        <li><code>&lt;тег атрибут1="значение" атрибут2="значение"&gt;</code></li>
+        <li><code>&lt;тег атрибут1="значение" атрибут2="значение"&gt;...&lt;/тег&gt;</code></li>
+    </ul>
+</section>
+<section class="slide"><h2>Виды тэгов</h2>
+    <ul>
+        <li>теги верхнего уровня;</li>
+        <li>теги заголовка документа;</li>
+        <li>блочные элементы;</li>
+        <li>строчные элементы;</li>
+        <li>универсальные элементы;</li>
+        <li>списки;</li>
+        <li>таблицы;</li>
+        <li>фреймы.</li>
+    </ul>
+</section>
+<section class="slide"><h2>Атрибут style</h2>
+    <ul>
+        <li>У каждого тэга есть такой атрибут</li>
+    </ul>
+</section>
+<section class="slide"><h2>Атрибут style</h2>
+    <ul>
+        <li>У каждого тэга есть такой атрибут</li>
+        <li>Позволяет задавать оформление (цвет текста, фон, размер шрифта и т.д.)</li>
+    </ul>
+</section>
+<section class="slide"><h2>Атрибут style</h2>
+    <pre><code class="lang-html">&lt;p style=&quot;font-size: 24px;&quot;&gt;
+  Здесь написан всякий текст &lt;span style=&quot;font-weight: bold&quot;&gt;жирный&lt;/span&gt;,
+        например.
+  Или &lt;span style=&quot;color: orange; background-color: green;&quot;&gt;
+    оранжевый с зеленым фоном
+  &lt;/span&gt;,
+  или &lt;span style=&quot;color: violet;text-decoration: underline;&quot;&gt;
+    Фиолетовый с нижним подчеркиванием
+  &lt;/span&gt;.
+&lt;/p&gt;
+</code></pre>
+</section>
+<section class="slide"><h2>CSS</h2>
+    <ul>
+        <li>Cascading Style Sheets</li>
+    </ul>
+</section>
+<section class="slide"><h2>CSS</h2>
+    <ul>
+        <li>набор параметров форматирования</li>
+    </ul>
+</section>
+<section class="slide"><h2>Преимущества</h2>
+    <ul>
+        <li>Разграничение кода и оформления</li>
+        <li>Разное оформление для разных устройств</li>
+        <li>Расширенные по сравнению с HTML способы оформления элементов</li>
+        <li>Ускорение загрузки сайта</li>
+        <li>Единое стилевое оформление множества документов</li>
+        <li>Централизованное хранение</li>
+    </ul>
+</section>
+<section class="slide"><h2>Базовое понятие CSS</h2>
+    <ul>
+        <li>Селектор — это некоторое имя стиля, для которого добавляются параметры форматирования</li>
+    </ul>
+</section>
+<section class="slide"><h2>Базовое понятие CSS</h2>
+    <ul>
+        <li>Селектор — это некоторое имя стиля, для которого добавляются параметры форматирования</li>
+        <li>В качестве селектора выступают теги, классы и идентификаторы.</li>
+    </ul>
+</section>
+<section class="slide"><h2>Синтаксис селекторов</h2>
+    <p><img src="./images/syntax-selectors.png" alt="syntax"></p>
+</section>
+<section class="slide"><h2>Виды селекторов</h2>
+    <ul>
+        <li>Селекторы тегов</li>
+        <li>Классы</li>
+        <li>Идентификаторы</li>
+        <li>Контекстные селекторы</li>
+        <li>Соседние селекторы</li>
+        <li>Дочерние селекторы</li>
+        <li>Селекторы атрибутов</li>
+        <li>Универсальный селектор</li>
+    </ul>
+</section>
+<section class="slide"><h2>Селекторы тегов</h2>
+    <ul>
+        <li>Определяются для всех типов селекторов</li>
+    </ul>
+    <pre><code class="lang-CSS">Тег { свойство1: значение; свойство2: значение; ... }
+</code></pre>
+</section>
+<section class="slide"><h2>Классы</h2>
+    <ul>
+        <li>Опеределяются у всех тэгов, у которых опеределен атрибут class с таким именем
+            <pre><code class="lang-CSS">.Имя класса { свойство1: значение; свойство2: значение; ... }
+</code></pre>
+        </li>
+    </ul>
+</section>
+<section class="slide"><h2>Классный пример</h2>
+    <pre><code class="lang-CSS">.red-with-bold { color: red; font-weight: bold;}
+</code></pre>
+    <pre><code class="lang-HTML">&lt;p class=&quot;red-with-bold&quot;&gt; Какой-то странный текст &lt;/p&gt;
+</code></pre>
+</section>
+<section class="slide"><h2>Идентификаторы</h2>
+    <ul>
+        <li>Похожи на класс, но определяют уникальное имя элемента</li>
+    </ul>
+    <pre><code class="lang-CSS">#Имя идентификатора { свойство1: значение; свойство2: значение; ... }
+</code></pre>
+</section>
+<section class="slide"><h2>Пример</h2>
+    <pre><code class="lang-CSS">#unique-element {font-size: 50px}
+</code></pre>
+    <pre><code class="lang-HTML">&lt;p&gt;
+  Очередной набор текста типо с
+&lt;span id=&#39;unique-element&#39;&gt; уникальным &lt;/span&gt; элементом.
+&lt;/p&gt;
+</code></pre>
+</section>
+<section class="slide"><h2>Пример</h2>
+    <ul>
+        <li>Недопустимо! только один тег может быть с таким id
+            <pre><code class="lang-HTML">&lt;p id=&#39;unique-element&#39;&gt;
+Очередной набор текста типо с
+&lt;span id=&#39;unique-element&#39;&gt; уникальным &lt;/span&gt; элементом.
+&lt;/p&gt;
+</code></pre>
+        </li>
+    </ul>
+</section>
+<section class="slide"><h2>Контестные селекторы</h2>
+    <ul>
+        <li>Определяет стиль элемента в контесте другого
+            <pre><code class="lang-HTML">&lt;Тег1&gt;
+&lt;Тег2&gt; ... &lt;/Тег2&gt;
+&lt;/Тег1&gt;
+</code></pre>
+            <pre><code class="lang-CSS">Тег1 Тег2 { ... }
+</code></pre>
+        </li>
+    </ul>
+</section>
+<section class="slide"><h2>Соседние селекторы</h2>
+    <ul>
+        <li>Только для элементов, которые следуют друг за другом</li>
+    </ul>
+    <pre><code class="lang-CSS">Селектор 1 + Селектор 2 { Описание правил стиля }
+</code></pre>
+</section>
+<section class="slide"><h2>Соседние селекторы и пример</h2>
+    <pre><code class="lang-HTML">&lt;p&gt;
+        Lorem &lt;b&gt;ipsum &lt;/b&gt; dolor sit amet, &lt;i&gt;consectetuer&lt;/i&gt;
+        adipiscing elit.
+        &lt;/p&gt;
+&lt;p&gt;
+        Lorem ipsum dolor sit amet, &lt;i&gt;consectetuer&lt;/i&gt; adipiscing elit.
+        &lt;/p&gt;
+</code></pre>
+</section>
+<section class="slide"><h2>Соседние селекторы и пример</h2>
+    <ul>
+        <li>Какие из них соседи?</li>
+    </ul>
+</section>
+<section class="slide"><h2>Соседние селекторы и пример</h2>
+    <pre><code class="lang-CSS">b + i {color: red}
+</code></pre>
+</section>
+<section class="slide"><h2>Дочерние селекторы</h2>
+    <ul>
+        <li>Элемент, который непосредственно располагается внутри родительского элемента</li>
+    </ul>
+    <pre><code class="lang-CSS">Селектор 1 &gt; Селектор 2 { Описание правил стиля }
+</code></pre>
+</section>
+<section class="slide"><h2>Дочерние и контекстые</h2>
+    <ul>
+        <li>Дочерний селектор - прямым потомком</li>
+        <li>Контестный селектор - может быть на любом уровне вложенности</li>
+    </ul>
+</section>
+<section class="slide"><h2>Универсальный селектор</h2>
+    <ul>
+        <li>Применяется для всех элементов сразу</li>
+    </ul>
+    <pre><code class="lang-CSS">* { Описание правил стиля }</code></pre>
+</section>
+<section class="slide"><h2>Наследование стилей</h2>
+    <ul>
+        <li>Для дочерних элементов -- перенос правил от родителя к дочерним</li>
+    </ul>
+</section>
+<section class="slide"><h2>Группировка</h2>
+    <ul>
+        <li>Можно группировать селекторы по стилям</li>
+    </ul>
+</section>
+<section class="slide"><h2>Было</h2>
+    <pre style="font-size: 15px"><code class="lang-CSS">h1 {
+  font-size: 12px;
+  color: red;
+}
+h2 {
+  font-size: 12px;
+  color: black;
+  text-decoration: underline;
+}
+h3 {
+  font-size: 12px;
+  color: green;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+</code></pre>
+</section>
+<section class="slide"><h2>Стало</h2>
+    <pre style="font-size: 15px"><code class="lang-CSS">h1, h2, h3 {
+  font-size: 12px;
+}
+h2, h3 {
+  text-decoration: underline;
+}
+h1 {
+  color: red;
+}
+h2 {
+  color: black;
+}
+h3 {
+  color: green;
+  letter-spacing: 2px;
+}
+</code></pre>
+</section>
+<section class="slide"><h2>Каскадность</h2>
+    <ul>
+        <li>Каскадность -- правила перекрытия</li>
+    </ul>
+</section>
+<section class="slide"><h2>Каскадность</h2>
+    <ul>
+        <li>Стиль браузера.</li>
+        <li>Стиль автора.</li>
+        <li>Стиль пользователя.</li>
+        <li>Стиль автора с добавлением !important.</li>
+        <li>Стиль пользователя с добавлением !important.</li>
+    </ul>
+</section>
+<section class="slide"><h2>Пример</h2>
+    <pre><code class="lang-HTML">&lt;div id=&quot;menu&quot;&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Первый&lt;/li&gt;
+  &lt;li class=&quot;two&quot;&gt;Второй&lt;/li&gt;
+  &lt;li&gt;Третий&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+</section>
+<section class="slide"><h2>И стили</h2>
+    <pre><code class="lang-CSS">#menu ul li {
+ color: green;
+}
+.two {
+ color: red;
+}
+</code></pre>
+</section>
+<section class="slide"><h2>Правило специфичности</h2>
+    <ul>
+        <li>a -- количество id в селекторе</li>
+        <li>b -- количество классов и псевдоклассов</li>
+        <li>с -- количество селекторов тэга</li>
+    </ul>
+</section>
+<section class="slide"><h2>Суммарная специфичность</h2>
+    <pre><code>100a + 10b + 1c
+</code></pre>
+</section>
+<section class="slide"><h2>Разберем пример</h2>
+    <pre><code class="lang-CSS">*              {} /* a=0 b=0 c=0 -&gt; специфичность = 0   */
+li             {} /* a=0 b=0 c=1 -&gt; специфичность = 1   */
+li:first-line  {} /* a=0 b=0 c=2 -&gt; специфичность = 2   */
+ul li          {} /* a=0 b=0 c=2 -&gt; специфичность = 2   */
+ul ol+li       {} /* a=0 b=0 c=3 -&gt; специфичность = 3   */
+ul li.red      {} /* a=0 b=1 c=2 -&gt; специфичность = 12  */
+li.red.level   {} /* a=0 b=2 c=1 -&gt; специфичность = 21  */
+#t34           {} /* a=1 b=0 c=0 -&gt; специфичность = 100 */
+#content #wrap {} /* a=2 b=0 c=0 -&gt; специфичность = 200 */
+</code></pre>
+</section>
+<section class="slide"><h2>CSS-фреймворки</h2>
+    <p>Упрощают жизнь</p>
+</section>
+<section class="slide"><h2>Плюсы</h2>
+    <ul>
+        <li>Кроссбраузерность</li>
+        <li>Возможность создать корректный HTML макет даже не очень опытному специалисту</li>
+        <li>Единообразие кода</li>
+        <li>Увеличение скорости разработки</li>
+    </ul>
+</section>
+<section class="slide"><h2>Минусы</h2>
+    <ul>
+        <li>Привязанность к стилю CSS библиотеки</li>
+        <li>Избыточный код</li>
+    </ul>
+</section>
+<section class="slide"><h2>Типы</h2>
+    <ul>
+        <li>Простые css-фреймворки;</li>
+        <li>Web-components;</li>
+        <li>Css-сетки;</li>
+        <li>Комплексные css-фреймворки.</li>
+    </ul>
+</section>
+<section class="slide"><h2>Популярные</h2>
+    <ul>
+        <li>Bootstrap</li>
+        <li>Foundation</li>
+        <li>Semantic UI</li>
+    </ul>
+</section>
+<section class="slide"><h2>Konec</h2>
+</section>
+<section class="slide"></section>
+
+<div class="progress"></div>
+
+<script src="html_renderer/shower/shower.min.js"></script>
+<script src="html_renderer/highlight/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>

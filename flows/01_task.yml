@@ -1,0 +1,77 @@
+{% from "macros/yaml-macros.yml" import indented_include %}
+
+title: "Задание №1 Числа"
+
+description: |
+
+    # Необходимо выполнить тест до 29.04.2020
+
+event:
+    kind: practice
+    title: Практика 1
+    description: Основы Python
+    ordinal: 3
+    time: 2019-04-23
+    end_time: 2020-04-29
+    all_day: True
+
+
+rules:
+    start:
+    -
+        if_after: 2019-04-23
+        if_before: 2020-04-29
+        if_has_role: [student, ta, instructor]
+        if_has_fewer_sessions_than: 4
+        may_start_new_session: True
+        may_list_existing_sessions: True
+
+    -
+        if_after: 2019-04-23
+        if_before: 2020-04-29
+        may_start_new_session: False
+        may_list_existing_sessions: True
+
+    access:
+    -
+        if_after: 2019-04-23
+        if_before: 2020-04-29
+        message: "Добро пожаловать"
+        permissions: [view, submit_answer, end_session, see_correctness]
+    -
+        if_after: 2019-04-23
+        if_before: 2020-04-29
+        message: "Добро пожаловать"
+        permissions: [view, see_correctness]
+
+    grade_identifier: task_1
+    grade_aggregation_strategy: use_latest
+
+    grading:
+    -
+        credit_percent: 100
+
+groups:
+-
+    id: intro
+    pages:
+    -
+        type: Page
+        id: welcome
+        content: |
+
+            # Добро пожаловать на Задание №1 "Числа"!
+
+            Не бойтесь, у вас все получится.
+-
+    id: number
+    shuffle: False
+    pages:
+    -
+        {{ indented_include("questions/01/number_1.yml", 8) }}
+
+completion_text: |
+
+    # Увидимся на новом задании!
+
+    Спасибо за ваши ответы.

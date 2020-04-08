@@ -1,0 +1,73 @@
+type: PythonCodeQuestionWithHumanTextFeedback
+id: number_1
+access_rules:
+    add_permissions:
+        - change_answer
+value: 5
+timeout: 10
+human_feedback_percentage: 50
+prompt: |
+
+  # Числа
+
+    Дано число $moment$. С начала суток прошло $moment$ минут. Определите, сколько
+    часов и минут будут показывать электронные часы в этот момент. Программа
+    должна вывести два числа: количество часов (от 0 до 23) и количество минут
+    (от 0 до 59). Учтите, что число moment может быть больше, чем количество
+    минут в сутках. Результат должен храниться в переменной $result$ в виде
+    строчки. Число $moment$ уже инициализированно в задаче, указывать его не нужно.
+  #### Пример входных данных:
+  moment = 128.
+  #### Пример выходных данных:
+  result = '02:08'.
+
+show_setup_code: False
+
+setup_code: |
+    import random
+
+    moment = int(random.uniform(0, 10000))
+
+names_for_user: [moment]
+
+names_from_user: [result]
+
+show_test_code: False
+
+test_code: |
+
+    from datetime import datetime
+
+    if not isinstance(result, str):
+        feedback.finish(0, "result - должен быть переменной типа str.")
+
+    elif not (len(result) >= 3 and len(result) <= 5):
+        feedback.finish(0, "result - неподходящего размера должен быть 'HH:MM'")
+
+    else:
+        try:
+            datetime_object = datetime.strptime(result, '%H:%M')
+        except:
+            feedback.finish(0, "result - не содержит время в формате 0-24:0-60")
+        else:
+            hours = (moment // 60) % 24
+            minutes = moment % 60
+            test = "%02d:%02d" % (hours, minutes)
+            if test != result:
+                feedback.finish(0, "Ваш result %s не равен - %s при moment = %d" % (result, test, moment))
+            else:
+                feedback.finish(1, "Верно!")
+
+correct_code: |
+    hours = (moment//60) % 24
+    minutes = moment % 60
+    result = "%02d:%02d" % (hours, minutes)
+    print("%d -> %s" % (moment, result))
+
+rubric: |
+    Числа
+
+
+initial_code: |
+    # moment - число прошедших минут
+    result = ...

@@ -1,0 +1,9 @@
+type: Page
+id: about
+content: |
+    [Ссылка на презентацию лекции](https://docs.google.com/presentation/d/107mPVYc6hbIOJlUjWaUTbItbuLjgo5v40tSFyl1QXUk/edit#slide=id.p10)
+    # Введение в программирование на языке Python
+
+    ## История языка
+    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTYdXc9xgbVZ8goqf8jOJKzDBx47wcud5EfEphJ1-GamtfMRGe4wnHbfYWKoCU7Sya_M34YnT-jl3hL/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+

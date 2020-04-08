@@ -1,0 +1,12 @@
+event_kinds:
+    lecture:
+        title: Лекция {nr}
+        color: blue
+
+    task:
+        title: Задание {nr}
+        color: red
+
+    practice:
+        title: Практика {nr}
+        color: gray

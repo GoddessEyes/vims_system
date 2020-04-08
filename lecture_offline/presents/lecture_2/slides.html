@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="html_renderer/shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="html_renderer/highlight/github_color_scheme.css">
+
+    <style>
+      li {
+        font-size: 32px;
+      }
+      .shifted {
+        margin-top: 10rem;
+      }
+      .big {
+        font-size: 24px;
+      }
+      .large {
+        font-size: 32px;
+      }
+      .centering {
+        margin-top: 7rem;
+      }
+    </style>
+</head>
+<body class="shower list">
+
+<header class="caption">
+    <h1>Фогстрим лекцции</h1>
+    <p>Функции</p>
+</header>
+
+<h1>Последовательности, циклы и функции</h1>
+<section class="slide"><h2></h2><h2 class="shifted">Последовательности, циклы и функции</h2></section>
+<section class="slide"><h2>В предыдущей серии</h2>
+<ul>
+<li>Особенности Python</li>
+</ul>
+</section><section class="slide"><h2>В предыдущей серии</h2>
+<ul>
+<li>Особенности Python</li>
+<li>Базовые типы данных</li>
+</ul>
+</section><section class="slide"><h2>В предыдущей серии</h2>
+<ul>
+<li>Особенности Python</li>
+<li>Базовые типы данных</li>
+<li>Операции с ними</li>
+</ul>
+</section><section class="slide"><h2>В предыдущей серии</h2>
+<ul>
+<li>Особенности Python</li>
+<li>Базовые типы данных</li>
+<li>Операции с ними</li>
+<li>Сделали первую домашку</li>
+</ul>
+</section><section class="slide"><h2>В предыдущей серии</h2>
+<ul>
+<li>Особенности Python</li>
+<li>Базовые типы данных</li>
+<li>Операции с ними</li>
+<li>Сделали первую домашку =)</li>
+</ul>
+</section><section class="slide"><h2>Последовательности</h2>
+</section><section class="slide"><h2>Последовательности</h2>
+<ul>
+<li>Списки</li>
+</ul>
+</section><section class="slide"><h2>Последовательности</h2>
+<ul>
+<li>Списки</li>
+<li>Кортежи</li>
+</ul>
+</section><section class="slide"><h2>Последовательности</h2>
+<ul>
+<li>Списки</li>
+<li>Кортежи</li>
+<li>Словари</li>
+</ul>
+</section><section class="slide"><h2>Последовательности</h2>
+<ul>
+<li>Списки</li>
+<li>Кортежи</li>
+<li>Словари</li>
+<li>Множества</li>
+</ul>
+</section><section class="slide"><h2>Списки (list)</h2>
+<pre class="large centering"><code class="lang-python">lst = [0, 1, &#39;abs&#39;, None]
+</code></pre>
+</section><section class="slide"><h2>Кортежи (tuple)</h2>
+<pre class="large centering"><code class="lang-python">tpl = (2, &#39;abc&#39;,)
+</code></pre>
+</section><section class="slide"><h2>Важно</h2>
+<p class="big">Списки изменяемые, кортежи нет</p>
+<pre class="large"><code class="lang-python">lst[0] = &#39;abc&#39;
+
+tpl[0] = &#39;1&#39; # Элементы кортежа нельзя изменить
+</code></pre>
+</section><section class="slide"><h2>Множества (set)</h2>
+<pre class="large centering"><code class="lang-python">new_set = {1, 2, &#39;abc&#39;, 1, &#39;World!&#39;, 2}
+
+print(new_set) # {1, 2, &#39;abc&#39;, &#39;World!&#39;}
+</code></pre>
+</section><section class="slide"><h2>Словари (dict)</h2>
+<pre class="big "><code class="lang-python">dct = {&#39;key1&#39;: 2, &#39;key2&#39;: &#39;abc&#39;, &#39;key3&#39;:None}
+
+dct[&#39;key1&#39;]
+
+dct[&#39;key3&#39;] = 50
+
+dct[&#39;a&#39;] # ОШИБКА! Такого ключа на существует
+
+dct[&#39;a&#39;] = 0 # Создаем новую пару
+</code></pre>
+</section><section class="slide"><h2>Инициализация последовательностей</h2>
+<pre class="large centering"><code class="lang-python">lst = list() # Создаем пустой список
+</code></pre>
+</section><section class="slide"><h2>Инициализация последовательностей</h2>
+<pre class="large centering"><code class="lang-python">lst = list() # Создаем пустой список
+
+lst = [] # Аналогично
+</code></pre>
+</section><section class="slide"><h2>Инициализация последовательностей</h2>
+<pre class="large centering"><code class="lang-python">tpl = tuple() # Пустой кортеж
+</code></pre>
+</section><section class="slide"><h2>Инициализация последовательностей</h2>
+<pre class="large centering"><code class="lang-python">tpl = tuple() # Пустой кортеж
+
+tpl = () # Но зачем?
+</code></pre>
+</section><section class="slide"><h2>Инициализация последовательностей</h2>
+<pre class="large centering"><code class="lang-python">dct = dict() # Пустой словарь
+</code></pre>
+</section><section class="slide"><h2>Инициализация последовательностей</h2>
+<pre class="large centering"><code class="lang-python">dct = dict() # Пустой словарь
+
+dct = {}
+</code></pre>
+</section><section class="slide"><h2>Пока остановимся на списках</h2>
+</section><section class="slide"><h2>Операции со списками</h2>
+<pre class="large centering"><code class="lang-python"># Добавляем элемент в конец списка
+lst.append(&#39;123&#39;) # lst = [&#39;123&#39;]
+</code></pre>
+</section><section class="slide"><h2>Операции со списками</h2>
+<pre class="large centering"><code class="lang-python"># Добавляем элемент в конец списка
+lst.append(&#39;123&#39;)  # lst = [&#39;123&#39;]
+
+# Удаление элемента
+del lst[0]  # lst = []
+</code></pre>
+</section><section class="slide"><h2>Операции со списками</h2>
+<pre class="big centering"><code class="lang-python"># Добавляем элемент в конец списка
+lst.append(&#39;123&#39;)  # lst = [&#39;123&#39;]
+
+# Удаление элемента
+del lst[0] # lst = []
+
+# Удаление элемента
+lst.pop(0) # lst = []
+</code></pre>
+</section><section class="slide"><h2>Операции со списками</h2>
+<pre class="large centering"><code class="lang-python"># Можно сделать так
+deleted = lst.pop(0)
+</code></pre>
+</section><section class="slide"><h2>Операции со списками</h2>
+<pre class="large centering"><code class="lang-python"># Можно сделать так
+deleted = lst.pop(0) # lst = [], deleted = &#39;123&#39;
+</code></pre>
+</section><section class="slide"><h2>Несколько очень полезных штук</h2>
+</section><section class="slide"><h2>Множественное присваивание</h2>
+<pre class="large centering"><code class="lang-python"># Целых две строки - какой ужас!
+a = 1
+b = 2
+</code></pre>
+</section><section class="slide"><h2>Множественное присваивание</h2>
+<pre class="large centering"><code class="lang-python"># Целых две строки - какой ужас!
+a = 1
+b = 2
+
+# Так интересней
+a, b = 1, 2
+</code></pre>
+</section><section class="slide"><h2>Множественное присваивание</h2>
+<pre class="large centering"><code class="lang-python"># Целых две строки - какой ужас!
+a = 1
+b = 2
+
+# Так интересней
+a, b = 1, 2 # a=1, b=2
+</code></pre>
+</section><section class="slide"><h2>Множественное присваивание</h2>
+<pre class="big centering"><code class="lang-python"># Целых две строки - какой ужас!
+a = 1
+b = 2
+
+# Так интересней
+a, b = 1, 2 # a=1, b=2
+
+# Поменяем местами
+a, b = b, a # ???
+</code></pre>
+</section><section class="slide"><h2>Множественное присваивание</h2>
+<pre class="big centering"><code class="lang-python"># Целых две строки - какой ужас!
+a = 1
+b = 2
+
+# Так интересней
+a, b = 1, 2 # a = 1, b = 2
+
+# Поменяем местами
+a, b = b, a # a = 2, b = 1
+</code></pre>
+</section><section class="slide"><h2>Распаковка списка</h2>
+<pre class="large centering"><code class="lang-python">lst = [1, &#39;two&#39;, 3]
+
+a = lst[0] # a = 1
+b = lst[1] # b = &#39;two&#39;
+</code></pre>
+</section><section class="slide"><h2>МНОГА БУКАФФ</h2>
+</section><section class="slide"><h2>Магия</h2>
+<pre class="large centering"><code class="lang-python">a, b = lst # a = 1, b = &#39;two&#39;.
+</code></pre>
+</section><section class="slide"><h2>Красиво?</h2>
+</section><section class="slide"><h2>Однако, вылетит <del>птичка</del> ошибка</h2>
+<pre class="large centering"><code class="lang-python"># Либо так
+a, b, c = lst
+</code></pre>
+</section><section class="slide"><h2>Однако, вылетит <del>птичка</del> ошибка</h2>
+<pre class="large centering"><code class="lang-python"># Либо так
+a, b, c = lst
+
+# Либо так
+a, b, _ = lst
+</code></pre>
+</section><section class="slide"><h2>Однако, вылетит <del>птичка</del> ошибка</h2>
+<pre class="large "><code class="lang-python"># Либо так
+a, b, c = lst
+
+# Либо так
+a, b, _ = lst
+
+# Либо так
+a, b, *rest = lst
+</code></pre>
+</section><section class="slide"><h2>Базовые конструкции</h2>
+<ul>
+<li>Условный оператор</li>
+</ul>
+</section><section class="slide"><h2>Базовые конструкции</h2>
+<ul>
+<li>Условный оператор</li>
+<li>Циклы</li>
+</ul>
+</section><section class="slide"><h2>Базовые конструкции</h2>
+<ul>
+<li>Условный оператор</li>
+<li>Циклы: for, while</li>
+</ul>
+</section><section class="slide"><h2>Условный оператор</h2>
+<pre class="big centering"><code class="lang-python">if age &lt; 18:
+    print(&#39;Никаких тебе сигарет. Ишь чего удумал!&#39;)
+else:
+    print(&#39;Вам синий или красный?&#39;)
+</code></pre>
+</section><section class="slide"><h2>Объединение нескольких условий</h2>
+<pre class="large centering"><code class="lang-python">if a &gt; 0 and b &gt; 0: # Если оба условия истинны
+</code></pre>
+</section>
+<section class="slide"><h2>Объединение нескольких условий</h2>
+<pre class="large centering"><code class="lang-python">if a &gt; 0 or b &gt; 0: # Хотя бы одно истинно
+</code></pre>
+</section>
+<section class="slide"><h2>Объединение нескольких условий</h2>
+<pre class="large centering"><code class="lang-python">if 0 &lt a &lt 10:
+</code></pre>
+</section>
+<section class="slide"><h2>Объединение нескольких условий</h2>
+<pre class="large centering"><code class="lang-python">if not a == 0: # Отрицание
+</code></pre>
+</section>
+<section class="slide"><h2>Объединение нескольких условий</h2>
+<pre class="large centering"><code class="lang-python">if not a: # Отрицание
+</code></pre>
+</section>
+<section class="slide"><h2>Вложенные условия</h2>
+<pre class="large centering"><code class="lang-python">if color == &#39;brown&#39;:
+    print(&#39;Коричневый&#39;)
+elif color == &#39;red&#39;:
+    print(&#39;Красный&#39;)
+elif color == &#39;blue&#39;:
+    print(&#39;Синий&#39;)
+</code></pre>
+</section><section class="slide"><h2>Циклы</h2>
+</section><section class="slide"><h2>Цикл while</h2>
+<pre class="large centering"><code class="lang-python">while a != 0:
+    a -= 0
+</code></pre>
+</section><section class="slide"><h2>Цикл while</h2>
+<pre class="large centering"><code class="lang-python"> # Цикл выполяется пока условие истинно
+while a != 0:
+    a -= 1
+</code></pre>
+</section><section class="slide"><h2>Цикл while</h2>
+<pre class="big centering"><code class="lang-python"> # Для задания условия те же правила, что для оператора if
+while a != 0:
+    a -= 1
+</code></pre>
+</section><section class="slide"><h2>Цикл for</h2>
+<pre class="large centering"><code class="lang-python">for count in range(10):
+    print(count)
+</code></pre>
+</section><section class="slide"><h2>Цикл for - отличный способо перебирать последовательности</h2>
+</section><section class="slide"><h2>Пример на Си</h2>
+<pre class="large centering"><code>for(int i = 0; i &lt; books_amount; i++) {
+    cout &lt;&lt; books[i];
+}
+</code></pre>
+</section><section class="slide"><h2>Хочется писать так</h2>
+<pre class="large centering"><code class="lang-python">for i in range(len(books)):
+    print(books[i])
+</code></pre>
+</section><section class="slide"><h2>Хочется писать так</h2>
+<pre class="large centering"><code class="lang-python"># Многие так и делают =(
+for i in range(len(books)):
+    print(books[i])
+</code></pre>
+</section><section class="slide"><h2>Цикл for - отличный способо перебирать последовательности!</h2>
+<pre class="large centering"><code class="lang-python">for book in books:
+    print(book)
+</code></pre>
+</section><section class="slide"><h2>Списки</h2>
+<pre class="large centering"><code class="lang-python">for element in [1, &#39;bsc&#39;, 3.14]:
+    print(element)
+</code></pre>
+</section><section class="slide"><h2>Кортежи</h2>
+<pre class="large centering"><code class="lang-python">for element in (1, &#39;bsc&#39;, 3.14):
+    print(element)
+</code></pre>
+</section><section class="slide"><h2>СТРОКИ ТОЖЕ ПОСЛЕДОВАТЕЛЬНОСТИ!</h2>
+<pre class="large centering"><code class="lang-python">for element in &#39;strings is collections&#39;:
+    print(element)
+</code></pre>
+</section><section class="slide"><h2>Индексы и элементы</h2>
+<pre class="large centering"><code class="lang-python">count = 0
+lst = [1, 2, 3, 4]
+for count in range(len(lst)):
+    print(count, lst[count])
+</code></pre>
+</section><section class="slide"><h2>Индексы и элементы</h2>
+<pre class="large centering"><code class="lang-python">count = 0
+lst = [1, 2, 3, 4]
+for count in range(len(lst)): # Грусть =(((
+    print(count, lst[count])
+</code></pre>
+</section><section class="slide"><h2>Индексы и элементы</h2>
+<pre class="large centering"><code class="lang-python">for count, element in enumerate(lst):
+    print(count, element)
+</code></pre>
+</section><section class="slide"><h2>Функции</h2>
+<pre class="large centering"><code class="lang-python">def square_n(n):
+    return n**2
+</code></pre>
+</section><section class="slide"><h2>Вызов функции</h2>
+<pre class="large centering"><code class="lang-python">square_n(10)
+</code></pre>
+</section><section class="slide"><h2>Вызов функции</h2>
+<pre class="large centering"><code class="lang-python">square_n(10) # 100
+</code></pre>
+</section><section class="slide"><h2>Вызов функции</h2>
+<pre class="large centering"><code class="lang-python">square_n(10) # 100
+
+square = square_n(10) # square = 100
+</code></pre>
+</section><section class="slide"><h2>Присваивать переменной</h2>
+<pre class="big centering"><code class="lang-python"># Если нет (), то мы обращаемся к ссылки на функцию
+square = square_n
+</code></pre>
+</section><section class="slide"><h2>Присваивать переменной</h2>
+<pre class="large centering"><code class="lang-python">square = square_n
+
+# Вот она магия!!
+square(5) # 25
+</code></pre>
+</section><section class="slide"><h2>Аргументы функции</h2>
+<p class="big centering">Два типа аргументов: позиционные(non-keyword) и именованные(keyword)</p>
+</section><section class="slide"><h2>Позиционные аргументы (non-keyword) и именнованные аргументы(keyword)</h2>
+<p class="big">В случае позиционных аргументов важен порядок передачи значений в функцию, для именнованных нет</p>
+<pre class="large"><code class="lang-python">def rate(distance, time):
+    return distance / time
+</code></pre>
+</section><section class="slide"><h2>Позиционные аргументы (non-keyword) и именнованные аргументы(keyword)</h2>
+<pre class="large centering"><code class="lang-python"># Важен порядок значений
+rate(2, 1) == rate(1, 2) # ???
+</code></pre>
+</section><section class="slide"><h2>Позиционные аргументы (non-keyword) и именнованные аргументы(keyword)</h2>
+<pre class="large centering"><code class="lang-python"># Важен порядок значений
+rate(2, 1) == rate(1, 2) # False
+</code></pre>
+</section><section class="slide"><h2>Позиционные аргументы (non-keyword) и именнованные аргументы(keyword)</h2>
+<pre class="centering"><code class="lang-python"># В случае именнованных важно указывать имя параметра, порядок не важен
+rate(distance=1, time=2) == rate(time=2, distance=1) # ???
+</code></pre>
+</section><section class="slide"><h2>Позиционные аргументы (non-keyword) и именнованные аргументы(keyword)</h2>
+<pre class="centering"><code class="lang-python"># В случае именнованных важно указывать имя параметра, порядок не важен
+rate(distance=1, time=2) == rate(time=2, distance=1) # True
+</code></pre>
+</section><section class="slide"><h2>Комбинация параметров</h2>
+<pre class="large centering"><code class="lang-python">rate(1, time=2) # 0.5
+</code></pre>
+</section><section class="slide"><h2>Комбинация параметров</h2>
+<pre class="big centering"><code class="lang-python"># В таком случае надо следить за порядком вызова
+rate(1, distance=2) # ???
+</code></pre>
+</section><section class="slide"><h2>Комбинация параметров</h2>
+<pre class="big centering"><code class="lang-python"># В таком случае надо следить за порядком вызова
+rate(1, distance=2)
+# TypeError: flow_rate() got multiple values
+# for argument &#39;distance&#39;
+</code></pre>
+</section><section class="slide"><h2>Аргументы по-умолчанию</h2>
+<pre class="large centering"><code class="lang-python">def rate(distance, time=1):
+    return distance / time
+</code></pre>
+</section><section class="slide"><h2>Аргументы по-умолчанию</h2>
+<pre class="large centering"><code class="lang-python">rate(20) # ???
+</code></pre>
+</section><section class="slide"><h2>Аргументы по-умолчанию</h2>
+<pre class="large centering"><code class="lang-python">rate(20) # 20
+</code></pre>
+</section><section class="slide"><h2>Что еще нужно знать?</h2>
+</section><section class="slide"><h2>Что еще нужно знать?</h2>
+<ul>
+<li>что такое <code>*args</code></li>
+</ul>
+</section><section class="slide"><h2>Что еще нужно знать?</h2>
+<ul>
+<li>что такое <code>*args</code></li>
+<li>что такое <code>**kwargs</code></li>
+</ul>
+</section><section class="slide"><h2>Что еще нужно знать?</h2>
+<ul>
+<li>что такое <code>*args</code></li>
+<li>что такое <code>**kwargs</code></li>
+<li>как передавать функцию как аргумент</li>
+</ul>
+</section><section class="slide"></section>
+
+<div class="progress"></div>
+
+<script src="html_renderer/shower/shower.min.js"></script>
+<script src="html_renderer/highlight/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- Copyright © 2017 Yours Truly, Famous Inc. -->
+
+</body>
+</html>

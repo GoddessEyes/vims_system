@@ -1,0 +1,14 @@
+chunks:
+- title: "Основы Python"
+  id: python1
+  rules:
+  - if_after: 2020-04-16
+    if_before: 2020-05-20
+    weight: 100
+  - weight: 100
+  content: |
+
+    1. [Лекция №1](flow:01_lecture){: class="lecture-name"} c 23.04.2020
+
+    2. [Задание №1](flow:01_task){: class="task-name"} 23.04.2020 - 29.04.2020
+

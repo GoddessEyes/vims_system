@@ -1,0 +1,60 @@
+{% from "macros/yaml-macros.yml" import indented_include %}
+
+title: "Лекция №1"
+description: |
+    # Лекция №1
+
+    1. О Python
+
+    2. Базовые определения
+
+    3. Последовательности и циклы
+
+video_src: 'https://www.youtube.com/embed/6gGR44e8e6s?list=PL4AEUdUthRKZiJ_Ocja2egY2w9pU107ch'
+
+additional_info:
+    -
+        title: Python
+        link: https://www.python.org/
+    -
+        title: Django
+        link: https://docs.djangoproject.com/
+
+event:
+    kind: lecture
+    title: Лекция 1
+    description: Основы Python
+    ordinal: 2
+    time: 2019-04-23
+    end_time: 2020-04-29
+    all_day: False
+
+rules:
+    start:
+    -
+        if_after: 2019-04-23
+        if_before: 2020-04-29
+        if_has_role: [student, ta, instructor]
+        may_start_new_session: True
+        may_list_existing_sessions: True
+
+    -
+        may_start_new_session: False
+        may_list_existing_sessions: True
+
+    access:
+    -
+        if_after: 2019-04-23
+        if_before: 2020-04-29
+        if_has_role: [student, ta, instructor]
+        permissions: [view, end_session]
+    grade_identifier: null
+pages:
+-
+    {{ indented_include("lectures/01/lecture_1.yml", 4) }}
+
+completion_text: |
+
+    # Конец лекции введения
+
+    ## Теперь не обходимо пройти задание [Задание №1](flow:01_task).
