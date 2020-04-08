@@ -58,6 +58,8 @@ groups:
     pages:
     -
         {{ indented_include("questions/01/number_1.yml", 8) }}
+        {{ indented_include("questions/01/number_2.yml", 8) }}
+        {{ indented_include("questions/01/number_3.yml", 8) }}
 
 completion_text: |
 
